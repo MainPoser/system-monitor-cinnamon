@@ -1,4 +1,4 @@
-[English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+[English](README.en.md) | [中文](README.md)
 
 # System Monitor Cinnamon
 
@@ -18,17 +18,8 @@
 
 ## 安装方法
 
-1. 下载项目文件到本地
-2. 将整个文件夹复制到Cinnamon小部件目录：
-   ```bash
-   mkdir -p ~/.local/share/cinnamon/applets/system-monitor-cinnamon@MainPoser/;
-   cp -r system-monitor-cinnamon ~/.local/share/cinnamon/applets/system-monitor-cinnamon@MainPoser/;
-   # 安装翻译文件
-   mkdir -p ~/.local/share/locale/zh_CN/LC_MESSAGES/;
-   msgfmt -o ~/.local/share/locale/zh_CN/LC_MESSAGES/system-monitor-cinnamon@MainPoser.mo ~/.local/share/cinnamon/applets/system-monitor-cinnamon@MainPoser/po/zh_CN.po
-   ```
-3. 在Cinnamon设置中启用小部件
-4. 右键点击面板 → 添加小部件 → 选择"System Monitor Cinnamon"
+1. 解压 .zip 到 ~/.local/share/cinnamon/applets
+2. 启用 System Monitor Cinnamon 小工具
 
 ## 使用说明
 
@@ -59,7 +50,7 @@ system-monitor-cinnamon/
 │   └── runners/
 │       ├── cat/          # 猫咪动画图标
 │       └── horse/        # 小马动画图标
-├── LICENSE                # 许可证文件
+├── po/                   # Translation files
 └── README.md              # 项目说明
 ```
 
@@ -68,7 +59,6 @@ system-monitor-cinnamon/
 - 使用JavaScript (ES6)编写
 - 基于Cinnamon Applet框架
 - 通过系统文件读取CPU、内存和网络数据
-- 使用GdkPixbuf实现动画效果
 
 ## 故障排除
 
@@ -77,20 +67,6 @@ system-monitor-cinnamon/
 1. 重启Cinnamon：按`Ctrl+Alt+Esc`或运行`cinnamon --replace`
 2. 检查系统日志：查看`~/.xsession-errors`中的错误信息
 3. 确保系统已安装必要的依赖包
-
-## 贡献指南
-
-欢迎提交问题报告和功能请求！如果您想贡献代码：
-
-1. Fork本项目
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 创建Pull Request
-
-## 许可证
-
-本项目采用MIT许可证 - 查看[LICENSE](LICENSE)文件了解详情。
 
 ## 作者
 
